@@ -30,6 +30,7 @@ Route::middleware(['auth:web', 'role:CUSTOMER'])->group(function () {
     Route::get('/showtimes/{id}/seats', [BookingController::class, 'seatMap'])->name('booking.seat-map');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/my-bookings', [DashboardController::class, 'myBookings'])->name('my.bookings');
+
 });
 
 // Authentication Routes (Guest only)
